@@ -1,3 +1,3 @@
 export default function Home() {
-  return <p>hello Allahverdi</p>;
+  return <p>hello worldc</p>;
 }
