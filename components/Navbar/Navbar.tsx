@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import "@/sass/components/_navbar.scss";
 
 const Navbar = () => {
   return (
     <nav className="nav">
-      <div className="nav__logo">
+      <Link href="/" className="nav__logo">
         <Image
           src="/assets/icons/nav/nav-logo.png"
           alt="nav_logo"
@@ -14,10 +15,12 @@ const Navbar = () => {
           className="nav__logo__item"
         />
         <div className="nav__logo__text">Payrole</div>
-      </div>
+      </Link>
       <div className="nav__links">
-        <div className="nav__links__item">How it works</div>
-        <div className="nav__links__item">
+        <Link href="/" className="nav__links__item">
+          How it works
+        </Link>
+        <Link href="/" className="nav__links__item">
           <div className="nav__links__item__text">Features</div>
           <Image
             src="/assets/icons/nav/down-arrow.png"
@@ -26,13 +29,21 @@ const Navbar = () => {
             height={16}
             className="nav__links__item__icon"
           />
-        </div>
-        <div className="nav__links__item">Pricing</div>
-        <div className="nav__links__item">Resources</div>
+        </Link>
+        <Link href="/" className="nav__links__item">
+          Pricing
+        </Link>
+        <Link href="/" className="nav__links__item">
+          Resources
+        </Link>
       </div>
       <div className="nav__auth">
-        <button className="nav__auth__login">Log in</button>
-        <button className="nav__auth__learnmore">Learn More</button>
+        <Link href="/" className="nav__auth__login">
+          Log in
+        </Link>
+        <Link href="/" className="nav__auth__learnmore">
+          Learn More
+        </Link>
       </div>
     </nav>
   );
