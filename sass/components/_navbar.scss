@@ -1,0 +1,68 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.nav {
+  width: 100vw;
+  height: 96px;
+  @include flexbox($justify: space-between, $items: center);
+  background-color: $main-color-white;
+
+  &__logo {
+    @include flexbox($justify: space-between, $items: center, $gap: 0.2em);
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__text {
+      color: $main-color-black;
+      @extend %website-heading4;
+    }
+  }
+
+  &__links {
+    @include flexbox($justify: space-between, $items: center, $gap: 3em);
+    @extend %button-size2;
+
+    &__item {
+      @include flexbox($justify: space-between, $items: center, $gap: 0.2em);
+      color: $main-color-black;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__auth {
+    @include flexbox($justify: space-between, $items: center, $gap: 0.5em);
+
+    &__login {
+      background-color: transparent;
+      @extend %button-size2;
+      color: $main-color-black;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__learnmore {
+      background-color: $greyscale-grey-100;
+      padding: 11px 24px;
+      @extend %button-size2;
+      border-radius: 100px;
+      color: $main-color-black;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
