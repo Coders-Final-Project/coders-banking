@@ -4,10 +4,10 @@
 @import "/sass/base/typography";
 
 .nav {
-  width: 100vw;
+  max-width: 100vw;
   height: 96px;
   @include flexbox($justify: space-between, $items: center);
-  background-color: $main-color-white;
+  background-color: $greyscale-grey-50;
 
   &__logo {
     @include flexbox($justify: space-between, $items: center, $gap: 0.2em);
@@ -53,7 +53,7 @@
     }
 
     &__learnmore {
-      background-color: $greyscale-grey-100;
+      background-color: $greyscale-grey-200;
       padding: 11px 24px;
       @extend %button-size2;
       border-radius: 100px;
