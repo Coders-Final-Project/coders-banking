@@ -1,0 +1,16 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.rounded__button {
+  padding: 22px 32px;
+  background-color: $main-color-black;
+  color: $main-color-white;
+  border-radius: 100px;
+  @extend %button-size1;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

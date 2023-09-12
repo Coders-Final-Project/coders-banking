@@ -5,6 +5,7 @@ import { useState } from "react";
 import PricingCard from "@/components/PricingCard/PricingCard";
 import PricingButton from "@/components/PricingButton/PricingButton";
 import FAQBody from "@/components/FAQBody/FAQBody";
+import GetStarted from "@/components/GetStarted/GetStarted";
 
 import "@/sass/pages/_pricing.scss";
 
@@ -51,6 +52,7 @@ const Pricing = () => {
         <div className="faq__title">frequently asked questions</div>
         <FAQBody faqData={FAQ} />
       </section>
+      <GetStarted />
     </>
   );
 };
