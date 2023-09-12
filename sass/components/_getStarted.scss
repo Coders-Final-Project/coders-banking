@@ -1,0 +1,29 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.getstarted {
+  padding: 120px 280px;
+  @include flexbox($direction: column, $justify: space-between, $items: center);
+
+  &__title {
+    color: $main-color-black;
+    @extend %website-heading2;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+
+    span {
+      color: $main-color-blue;
+    }
+  }
+
+  &__desc {
+    color: $greyscale-grey-600;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+}

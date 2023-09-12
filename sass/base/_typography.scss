@@ -13,6 +13,7 @@ $font-size11: 14px;
 $font-style: normal;
 $font-weight1: 600;
 $font-weight2: 500;
+$font-weight3: 400;
 
 $line-height1: 150%;
 $line-height2: 120%;
@@ -59,7 +60,7 @@ $line-height3: 110%;
 }
 
 %website-heading2 {
-  font-size: $font-size8;
+  font-size: $font-size2;
   font-style: $font-style;
   font-weight: $font-weight1;
   line-height: $line-height3;
@@ -67,7 +68,7 @@ $line-height3: 110%;
 }
 
 %website-heading3 {
-  font-size: $font-size8;
+  font-size: $font-size3;
   font-style: $font-style;
   font-weight: $font-weight1;
   line-height: $line-height2;
@@ -142,4 +143,19 @@ $line-height3: 110%;
   font-weight: $font-weight1;
   line-height: $line-height2;
   letter-spacing: -0.16px;
+}
+
+%body-medium {
+  font-size: $font-size10;
+  font-style: $font-style;
+  font-weight: $font-weight2;
+  line-height: $line-height1;
+  letter-spacing: -0.32px;
+}
+
+%body-regular {
+  font-size: $font-size10;
+  font-style: $font-style;
+  font-weight: $font-weight3;
+  line-height: $line-height1;
 }

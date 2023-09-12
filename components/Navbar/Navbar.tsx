@@ -30,7 +30,7 @@ const Navbar = () => {
             className="nav__links__item__icon"
           />
         </Link>
-        <Link href="/" className="nav__links__item">
+        <Link href="/pricing" className="nav__links__item">
           Pricing
         </Link>
         <Link href="/" className="nav__links__item">

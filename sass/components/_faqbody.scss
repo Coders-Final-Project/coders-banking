@@ -1,0 +1,73 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.faq__body {
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: center,
+    $gap: 0.5em
+  );
+
+  &__item {
+    width: 1060px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    border: 1px solid $greyscale-grey-200;
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: flex-start,
+      $gap: 1em
+    );
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__question {
+      width: 100%;
+      @include flexbox($justify: space-between, $items: center);
+
+      &__text {
+        color: $main-color-black;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      &__icons--up {
+        display: none;
+      }
+
+      &__icons--up.active {
+        display: block;
+      }
+
+      &__icons--down {
+        display: none;
+      }
+
+      &__icons--down.active {
+        display: block;
+      }
+    }
+
+    &__answer {
+      color: $greyscale-grey-600;
+      display: none;
+      font-family: TT Hoves;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+    }
+
+    &__answer.active {
+      display: block;
+    }
+  }
+}

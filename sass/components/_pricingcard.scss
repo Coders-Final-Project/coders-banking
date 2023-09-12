@@ -1,0 +1,146 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.pricing__offer__cards {
+  @include flexbox($justify: space-between, $items: center, $gap: 2.5em);
+
+  &__item {
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: center,
+      $gap: 2.5em
+    );
+    padding: 48px;
+    border: 1px solid $greyscale-grey-200;
+    border-radius: 24px 0px 0px 24px;
+    transition: all 0.5s linear;
+
+    &__content {
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $items: flex-start,
+        $gap: 2em
+      );
+
+      &__btn {
+        padding: 16px 24px;
+        border-radius: 40px;
+        background-color: #f0f6fe;
+        color: $main-color-blue;
+        @extend %website-heading5;
+        text-transform: uppercase;
+        font-size: 16px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__charge {
+        @include flexbox(
+          $direction: column,
+          $justify: space-between,
+          $items: flex-start,
+          $gap: 1em
+        );
+        margin-bottom: 1em;
+
+        &__header {
+          @extend %website-heading4;
+          font-size: 48px;
+          color: $main-color-black;
+          text-transform: uppercase;
+
+          span {
+            color: $greyscale-grey-400;
+            @extend %button-size4;
+          }
+        }
+
+        &__desc {
+          color: $greyscale-grey-600;
+          @extend %body-medium;
+        }
+
+        &__comment {
+          color: $main-color-blue;
+          @extend %body-regular;
+        }
+      }
+
+      &__list {
+        @include flexbox(
+          $direction: column,
+          $justify: space-between,
+          $items: flex-start,
+          $gap: 1em
+        );
+
+        &__element {
+          @include flexbox(
+            $justify: space-between,
+            $items: center,
+            $gap: 0.75em
+          );
+
+          &__icon {
+            padding: 8px;
+            border-radius: 40px;
+            background-color: $shades-of-blue-98;
+            color: $main-color-black;
+          }
+
+          &__text {
+            @extend %body-regular;
+            color: $greyscale-grey-600;
+            max-width: 360px;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      padding: 22px 32px;
+      width: 100%;
+      background-color: $greyscale-grey-50;
+      color: $main-color-black;
+      border-radius: 100px;
+      @extend %button-size1;
+      text-transform: capitalize;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__item.active {
+    transform: scale(0.9);
+    transition: all 0.5s linear;
+  }
+
+  &__item:last-child {
+    background-color: $main-color-black;
+    border-radius: 0px 24px 24px 0px;
+
+    .pricing__offer__cards__item__content__btn {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $shades-of-blue-90;
+    }
+
+    .pricing__offer__cards__item__content__charge__header,
+    .pricing__offer__cards__item__content__charge__desc,
+    .pricing__offer__cards__item__content__list__element__text {
+      color: $main-color-white;
+    }
+
+    .pricing__offer__cards__item__content__list__element__icon {
+      background-color: #576189;
+    }
+  }
+}
