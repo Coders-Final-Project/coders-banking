@@ -2,10 +2,15 @@
 
 interface IPricingButton {
   categories: string[];
+  activeCategory: string;
   filterCards: (category: string) => void;
 }
 
-const PricingButton = ({ categories, filterCards }: IPricingButton) => {
+const PricingButton = ({
+  categories,
+  activeCategory,
+  filterCards,
+}: IPricingButton) => {
   return (
     <div className="pricing__offer__btngroup">
       {categories.map((category, index) => {
@@ -13,7 +18,11 @@ const PricingButton = ({ categories, filterCards }: IPricingButton) => {
           <button
             key={index}
             onClick={() => filterCards(category)}
-            className="pricing__offer__btngroup__item"
+            className={`${
+              category === activeCategory
+                ? "pricing__offer__btngroup__item active"
+                : "pricing__offer__btngroup__item"
+            }`}
           >
             {category}
           </button>

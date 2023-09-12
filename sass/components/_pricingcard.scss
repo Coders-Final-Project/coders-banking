@@ -16,6 +16,7 @@
     padding: 48px;
     border: 1px solid $greyscale-grey-200;
     border-radius: 24px 0px 0px 24px;
+    transition: all 0.5s linear;
 
     &__content {
       @include flexbox(
@@ -116,6 +117,11 @@
         cursor: pointer;
       }
     }
+  }
+
+  &__item.active {
+    transform: scale(0.9);
+    transition: all 0.5s linear;
   }
 
   &__item:last-child {
