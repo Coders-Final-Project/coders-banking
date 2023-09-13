@@ -9,20 +9,6 @@
   @include flexbox($justify: space-between, $items: center);
   background-color: $greyscale-grey-50;
 
-  &__logo {
-    @include flexbox($justify: space-between, $items: center, $gap: 0.2em);
-    text-decoration: none;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &__text {
-      color: $main-color-black;
-      @extend %website-heading4;
-    }
-  }
-
   &__links {
     @include flexbox($justify: space-between, $items: center, $gap: 3em);
     @extend %button-size2;

@@ -1,21 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import MainLogo from "../MainLogo/MainLogo";
+
 import "@/sass/components/_navbar.scss";
 
 const Navbar = () => {
   return (
     <nav className="nav">
-      <Link href="/" className="nav__logo">
-        <Image
-          src="/assets/icons/nav/nav-logo.png"
-          alt="nav_logo"
-          width={24}
-          height={24}
-          className="nav__logo__item"
-        />
-        <div className="nav__logo__text">Payrole</div>
-      </Link>
+      <MainLogo />
       <div className="nav__links">
         <Link href="/" className="nav__links__item">
           How it works

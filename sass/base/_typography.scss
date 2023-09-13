@@ -159,3 +159,11 @@ $line-height3: 110%;
   font-weight: $font-weight3;
   line-height: $line-height1;
 }
+
+%body-bold {
+  font-size: $font-size9;
+  font-style: $font-style;
+  font-weight: $font-weight1;
+  line-height: $line-height1;
+  letter-spacing: -0.18px;
+}

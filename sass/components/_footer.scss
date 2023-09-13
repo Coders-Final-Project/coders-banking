@@ -1,0 +1,84 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.footer {
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: center,
+    $gap: 7.1em
+  );
+  padding: 120px 182px 48px 190px;
+  max-width: 1440px;
+
+  &__overview {
+    width: 100%;
+    @include flexbox($justify: space-between, $items: flex-start);
+
+    &__column {
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $items: flex-start,
+        $gap: 1em
+      );
+
+      &__title {
+        @extend %body-bold;
+        color: $main-color-black;
+      }
+
+      &__body {
+        @include flexbox(
+          $direction: column,
+          $justify: space-between,
+          $items: flex-start,
+          $gap: 1em
+        );
+        @extend %body-medium;
+        color: $greyscale-grey-400;
+
+        &__item {
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__social {
+    @include flexbox($justify: space-between, $items: center);
+    width: 100%;
+
+    &__groups {
+      @include flexbox($justify: space-between, $items: center, $gap: 2em);
+
+      &__text {
+        color: $greyscale-grey-400;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__media {
+      @include flexbox($justify: space-between, $items: center, $gap: 1.5em);
+
+      &__item {
+        padding: 10px;
+        background-color: $greyscale-grey-100;
+        border-radius: 50%;
+      }
+    }
+  }
+}
