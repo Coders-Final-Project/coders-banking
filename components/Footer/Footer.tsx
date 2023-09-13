@@ -4,6 +4,7 @@ import Image from "next/image";
 import "@/sass/components/_footer.scss";
 
 import MainLogo from "../MainLogo/MainLogo";
+import FooterSocialItem from "../FooterSocialItem/FooterSocialItem";
 
 const Footer = () => {
   return (
@@ -63,49 +64,17 @@ const Footer = () => {
       </div>
       <div className="footer__social">
         <div className="footer__social__groups">
-          <div className="footer__social__groups__item">
+          <div className="footer__social__groups__text">
             ©2023. All Rights Reserved.
           </div>
-          <div className="footer__social__groups__item">Privacy Policy</div>
-          <div className="footer__social__groups__item">Terms of Service</div>
+          <div className="footer__social__groups__text">Privacy Policy</div>
+          <div className="footer__social__groups__text">Terms of Service</div>
         </div>
         <div className="footer__social__media">
-          <Link href="#" className="footer__social__media__item">
-            <Image
-              src="/assets/icons/general/facebook.png"
-              alt="facebook"
-              width={20}
-              height={20}
-              className="footer__social__media__item__img"
-            />
-          </Link>
-          <Link href="#" className="footer__social__media__item">
-            <Image
-              src="/assets/icons/general/instagram.png"
-              alt="facebook"
-              width={20}
-              height={20}
-              className="footer__social__media__item__img"
-            />
-          </Link>
-          <Link href="#" className="footer__social__media__item">
-            <Image
-              src="/assets/icons/general/linkedin.png"
-              alt="facebook"
-              width={20}
-              height={20}
-              className="footer__social__media__item__img"
-            />
-          </Link>
-          <Link href="#" className="footer__social__media__item">
-            <Image
-              src="/assets/icons/general/twitter.png"
-              alt="facebook"
-              width={20}
-              height={20}
-              className="footer__social__media__item__img"
-            />
-          </Link>
+          <FooterSocialItem location="#" icon="facebook" />
+          <FooterSocialItem location="#" icon="instagram" />
+          <FooterSocialItem location="#" icon="linkedin" />
+          <FooterSocialItem location="#" icon="twitter" />
         </div>
       </div>
     </footer>
