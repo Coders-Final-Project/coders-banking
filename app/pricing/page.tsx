@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import PricingCard from "@/components/PricingCard/PricingCard";
-import PricingButton from "@/components/PricingButton/PricingButton";
+import FilterButton from "@/components/FilterButton/FilterButton";
 import FAQBody from "@/components/FAQBody/FAQBody";
 import GetStarted from "@/components/GetStarted/GetStarted";
 
@@ -41,7 +41,7 @@ const Pricing = () => {
             the plan that is right for you.
           </div>
         </div>
-        <PricingButton
+        <FilterButton
           categories={categories}
           filterCards={filterCards}
           activeCategory={activeCategory}
