@@ -1,18 +1,20 @@
 "use client";
 
-interface IPricingButton {
+import "@/sass/components/_filterButton.scss";
+
+interface IFilterButton {
   categories: string[];
   activeCategory: string;
   filterCards: (category: string) => void;
 }
 
-const PricingButton = ({
+const FilterButton = ({
   categories,
   activeCategory,
   filterCards,
-}: IPricingButton) => {
+}: IFilterButton) => {
   return (
-    <div className="pricing__offer__btngroup">
+    <div className="filter__button__container">
       {categories.map((category, index) => {
         return (
           <button
@@ -20,8 +22,8 @@ const PricingButton = ({
             onClick={() => filterCards(category)}
             className={`${
               category === activeCategory
-                ? "pricing__offer__btngroup__item active"
-                : "pricing__offer__btngroup__item"
+                ? "filter__button__container__item active"
+                : "filter__button__container__item"
             }`}
           >
             {category}
@@ -32,4 +34,4 @@ const PricingButton = ({
   );
 };
 
-export default PricingButton;
+export default FilterButton;
