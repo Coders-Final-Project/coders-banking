@@ -1,0 +1,92 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.blog {
+  padding: 88px 80px;
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: center,
+    $gap: 4em
+  );
+
+  &__title {
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: center,
+      $gap: 1.5em
+    );
+
+    &__heading {
+      @extend %website-heading2;
+      color: $main-color-black;
+      text-transform: capitalize;
+    }
+
+    &__desc {
+      @extend %dashboard-heading4;
+      color: $greyscale-grey-600;
+    }
+  }
+
+  &__featured {
+    width: 100%;
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: flex-start,
+      $gap: 3em
+    );
+
+    &__title {
+      @extend %website-heading6;
+      color: $main-color-black;
+    }
+
+    &__body {
+      width: 100%;
+      @include flexbox($justify: space-between, $items: center, $gap: 2.5em);
+
+      &__card {
+        max-width: 730px;
+      }
+
+      &__contact {
+        width: 100%;
+        @include flexbox(
+          $direction: column,
+          $justify: space-between,
+          $items: center
+        );
+        background-color: $shades-of-blue-96;
+        padding: 80px 48px 48px 48px;
+        border-radius: 24px;
+
+        &__title {
+          @extend %website-heading4;
+          color: $main-color-black;
+          margin: 48px 0;
+          font-size: 48px;
+        }
+
+        &__input {
+          width: 100%;
+          padding: 25px 32px;
+          border-radius: 100px;
+          background-color: $main-color-white;
+          border: none;
+          outline: none;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          color: $greyscale-grey-400;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
