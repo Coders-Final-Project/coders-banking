@@ -1,0 +1,87 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.blog__card {
+  width: 730px;
+  @include flexbox(
+    $direction: column,
+    $justify: flex-start,
+    $items: flex-start,
+    $gap: 2em
+  );
+
+  &__img {
+    width: 100%;
+    border-radius: 1em;
+  }
+
+  &__context {
+    width: 100%;
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: flex-start,
+      $gap: 1.5em
+    );
+
+    &__common {
+      width: 100%;
+      @include flexbox($justify: space-between, $items: center);
+
+      &__category,
+      &__date {
+        padding: 8px 16px;
+        border-radius: 100px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0.28px;
+        text-transform: uppercase;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__category {
+        background-color: $shades-of-blue-96;
+        color: $main-color-blue;
+      }
+
+      &__date {
+        background-color: $greyscale-grey-100;
+        color: $greyscale-grey-500;
+      }
+    }
+
+    &__title {
+      @extend %title-size1;
+      color: $main-color-black;
+      text-decoration: none;
+    }
+
+    &__author {
+      @include flexbox($justify: flex-start, $items: center, $gap: 0.75em);
+
+      &__img {
+        padding: 4px;
+        background-color: $shades-of-blue-96;
+        border-radius: 32px;
+      }
+
+      &__name {
+        @extend %body-medium;
+        color: $greyscale-grey-700;
+        text-decoration: none;
+      }
+
+      &__estimatedTime {
+        @extend %body-medium;
+        color: $greyscale-grey-500;
+      }
+    }
+  }
+}
