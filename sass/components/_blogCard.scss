@@ -4,15 +4,16 @@
 @import "/sass/base/typography";
 
 .blog__card {
-  width: 100%;
+  width: 730px;
   @include flexbox(
     $direction: column,
-    $justify: space-between,
+    $justify: flex-start,
     $items: flex-start,
     $gap: 2em
   );
 
   &__img {
+    width: 100%;
     border-radius: 1em;
   }
 

@@ -1,0 +1,51 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.trending__cards {
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: center,
+    $gap: 2em
+  );
+
+  &__item {
+    @include flexbox($justify: space-between, $items: center, $gap: 1em);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__img {
+      border-radius: 1em;
+    }
+
+    &__context {
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $items: flex-start,
+        $gap: 0.5em
+      );
+
+      &__title {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: $main-color-blue;
+      }
+
+      &__desc {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        color: $main-color-black;
+      }
+    }
+  }
+}

@@ -4,6 +4,9 @@ import { useState } from "react";
 
 import FilterButton from "@/components/FilterButton/FilterButton";
 import BlogFeatured from "@/components/BlogFeatured/BlogFeatured";
+import BlogLatest from "@/components/BlogLatest/BlogLatest";
+import BlogTrending from "@/components/BlogTrending/BlogTrending";
+import BlogPopular from "@/components/BlogPopular/BlogPopular";
 
 import "@/sass/pages/_blog.scss";
 
@@ -39,6 +42,9 @@ const Blog = () => {
         activeCategory={activeCategory}
       />
       <BlogFeatured blogs={blogs} />
+      <BlogLatest blogs={blogs} />
+      <BlogTrending blogs={blogs} />
+      <BlogPopular blogs={blogs} />
     </main>
   );
 };

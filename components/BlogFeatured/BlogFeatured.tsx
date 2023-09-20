@@ -3,19 +3,9 @@ import Image from "next/image";
 import BlogCard from "../BlogCard/BlogCard";
 import RoundedButton from "../RoundedButton/RoundedButton";
 
-interface IBlogFeatued {
-  id: number;
-  title: string;
-  image: string;
-  category: string;
-  date: string;
-  authorImage: string;
-  authorName: string;
-  estimatedTime: string;
-  role: string;
-}
+import { IBlogCard } from "@/interface";
 
-const BlogFeatured = ({ blogs }: { blogs: IBlogFeatued[] }) => {
+const BlogFeatured = ({ blogs }: { blogs: IBlogCard[] }) => {
   return (
     <div className="blog__featured">
       <div className="blog__featured__title">Featured articles</div>

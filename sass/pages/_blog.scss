@@ -32,7 +32,9 @@
     }
   }
 
-  &__featured {
+  &__featured,
+  &__latest,
+  &__trending {
     width: 100%;
     @include flexbox(
       $direction: column,
@@ -40,6 +42,8 @@
       $items: flex-start,
       $gap: 3em
     );
+    flex-wrap: wrap;
+    margin-top: 36px;
 
     &__title {
       @extend %website-heading6;
@@ -86,6 +90,35 @@
           color: $greyscale-grey-400;
           margin-bottom: 16px;
         }
+      }
+    }
+  }
+
+  &__popular {
+    width: 100%;
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: flex-start,
+      $gap: 3em
+    );
+    margin-top: 36px;
+
+    &__title {
+      @extend %website-heading6;
+      color: $main-color-black;
+    }
+
+    &__body {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      flex-wrap: wrap;
+      row-gap: 48px;
+      column-gap: 40px;
+
+      .blog__card {
+        width: 100%;
       }
     }
   }

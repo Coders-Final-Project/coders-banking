@@ -110,3 +110,36 @@ export const blogs = [
     role: "popular",
   },
 ];
+
+export const trendingCategories = [
+  {
+    id: 1,
+    title: "contractors",
+    desc: "How to Register as a Sole Proprietorship in France. All You Need to Know",
+    imgUrl: "/assets/blog/blog-trending1.png",
+  },
+  {
+    id: 2,
+    title: "contractors",
+    desc: "Synchronous Vs. Asynchronous Communication: All You Need to Know",
+    imgUrl: "/assets/blog/blog-trending2.png",
+  },
+  {
+    id: 3,
+    title: "contractors",
+    desc: "How to Set Up as an Independent Contractor In Netherlands",
+    imgUrl: "/assets/blog/blog-trending3.png",
+  },
+  {
+    id: 4,
+    title: "payroll",
+    desc: "What is Accrued Payroll and Why You Should Track It",
+    imgUrl: "/assets/blog/blog-trending4.png",
+  },
+  {
+    id: 5,
+    title: "legal",
+    desc: "What is a financial controller? The role & keys to effectiveness",
+    imgUrl: "/assets/blog/blog-trending5.png",
+  },
+];
