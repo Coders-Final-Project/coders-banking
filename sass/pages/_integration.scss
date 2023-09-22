@@ -1,0 +1,73 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.integration {
+  padding: 88px 80px;
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: center,
+    $gap: 4em
+  );
+
+  &__title {
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: center,
+      $gap: 1.5em
+    );
+    text-align: center;
+
+    &__heading {
+      @extend %website-heading2;
+      color: $main-color-black;
+    }
+
+    &__desc {
+      color: $greyscale-grey-600;
+      @extend %body-medium2;
+      max-width: 805px;
+    }
+  }
+
+  &__unlock {
+    padding: 120px 280px;
+    @include flexbox($justify: center, $items: center);
+
+    &__card {
+      max-width: 880px;
+      @include flexbox(
+        $direction: column,
+        $justify: space-between,
+        $items: center
+      );
+      padding: 48px;
+      border-radius: 10px;
+      box-shadow: $box-shadow;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__title {
+        @extend %website-heading3;
+        color: $main-color-black;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      &__desc {
+        color: $greyscale-grey-600;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

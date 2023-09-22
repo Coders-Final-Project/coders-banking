@@ -1,0 +1,58 @@
+export const integrations = [
+  {
+    id: 1,
+    category: "accounting",
+    title: "QuickBooks",
+    desc: "Track expenses, manage cash flow & create invoices.",
+    imgUrl: "/assets/integration/quickbook.png",
+  },
+  {
+    id: 2,
+    category: "accounting",
+    title: "Xero",
+    desc: "Online accounting software for your business connects you to your bank",
+    imgUrl: "/assets/integration/xero.png",
+  },
+  {
+    id: 3,
+    category: "human resources",
+    title: "Zoho",
+    desc: " Helps you craft professional invoices and get paid faster.",
+    imgUrl: "/assets/integration/zoho.png",
+  },
+  {
+    id: 4,
+    category: "hiring",
+    title: "BambooHR",
+    desc: "Track expenses, manage cash flow & create invoices.",
+    imgUrl: "/assets/integration/bambooHR.png",
+  },
+  {
+    id: 5,
+    category: "featured",
+    title: "Ashby",
+    desc: "Our products are trusted by recruiting teams at fast growing companies.",
+    imgUrl: "/assets/integration/ashby.png",
+  },
+  {
+    id: 6,
+    category: "open API",
+    title: "Greenhouse",
+    desc: "Help make companies great at hiring and hire for what's next.",
+    imgUrl: "/assets/integration/greenhouse.png",
+  },
+  {
+    id: 7,
+    category: "open API",
+    title: "Lever",
+    desc: "Helps your talent teams scale recruitment efforts and hire people faster.",
+    imgUrl: "/assets/integration/lever.png",
+  },
+  {
+    id: 8,
+    category: "human resources",
+    title: "hiring",
+    desc: "Find and attract more candidates. Screen and evaluate from anywhere.",
+    imgUrl: "/assets/integration/workable.png",
+  },
+];

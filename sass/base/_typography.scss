@@ -153,6 +153,14 @@ $line-height3: 110%;
   letter-spacing: -0.32px;
 }
 
+%body-medium2 {
+  font-size: $font-size8;
+  font-style: $font-style;
+  font-weight: $font-weight2;
+  line-height: $line-height1;
+  letter-spacing: -0.24px;
+}
+
 %body-regular {
   font-size: $font-size10;
   font-style: $font-style;
