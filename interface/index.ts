@@ -16,3 +16,11 @@ export interface IBlogTrending {
   desc: string;
   imgUrl: string;
 }
+
+export interface IIntegrationCard {
+  id: number;
+  category: string;
+  title: string;
+  desc: string;
+  imgUrl: string;
+}
