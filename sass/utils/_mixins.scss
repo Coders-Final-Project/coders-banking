@@ -5,3 +5,21 @@
   align-items: $items;
   gap: $gap;
 }
+
+@mixin homepageTitle() {
+  line-height: 88px;
+  font-size: 80px;
+  text-align: center;
+  font-weight: 600;
+
+  span {
+    color: $main-color-blue;
+  }
+}
+
+@mixin roundedBtn($fontSize, $bgColor, $color, $bRadius) {
+  font-size: $fontSize;
+  background-color: $bgColor;
+  color: $color;
+  border-radius: $bRadius;
+}

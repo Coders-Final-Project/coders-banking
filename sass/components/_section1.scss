@@ -1,0 +1,55 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+@import "/sass/base/reset";
+
+.container {
+  text-align: center;
+  width: 950px;
+  margin: auto;
+  margin-top: 88px;
+
+  &__title {
+    color: $main-color-black;
+    @extend %website-heading1;
+    text-transform: capitalize;
+
+    span {
+      color: $main-color-blue;
+    }
+  }
+
+  &__desc {
+    color: $main-color-black;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 33.6px;
+    margin-bottom: 40px;
+    margin-top: 24px;
+  }
+
+  &__info {
+    color: $greyscale-grey-600;
+    font-size: 18px;
+    line-height: 28.8px;
+    margin-top: 32px;
+
+    span {
+      color: $main-color-black;
+      line-height: 26.1px;
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    padding: 22px 32px;
+    font-weight: 600;
+    line-height: 36px;
+    @include roundedBtn(24px, $main-color-black, $main-color-white, 100px);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
