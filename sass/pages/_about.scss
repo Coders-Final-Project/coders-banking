@@ -1,0 +1,72 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+@import "/sass/base/reset";
+
+.about {
+  &__item1 {
+    .about__title {
+      @include homepageTitle();
+    }
+    .about__desc {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 33.6px;
+      text-align: center;
+      color: $greyscale-grey-600;
+      margin-top: 24px;
+    }
+
+    .about__statistics {
+      margin: auto;
+      color: $main-color-white;
+      width: 1000px;
+      background-color: $main-color-black;
+      border-radius: 24px;
+      margin-top: 72px;
+
+      &--title {
+        padding-top: 48px;
+        padding-bottom: 32px;
+        text-align: center;
+      }
+
+      &--table {
+        display: flex;
+        gap: 24px;
+        justify-content: space-around;
+        margin: auto;
+        width: 50%;
+        padding-bottom: 48px;
+
+        &--1,
+        &--2,
+        &--3 {
+          background-color: #ffffff1a;
+          display: flex;
+          padding: 24px 60px 24px 0;
+          width: 300px;
+          border-radius: 24px;
+          gap: 24px;
+
+          div:nth-of-type(1) {
+            padding-left: 24px;
+          }
+
+          div:nth-of-type(2) {
+            font-size: 40px;
+            line-height: 60px;
+            font-weight: 600;
+
+            p:nth-of-type(2) {
+              color: $greyscale-grey-400;
+              line-height: 26.1px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
