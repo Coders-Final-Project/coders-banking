@@ -1,0 +1,32 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+@import "/sass/base/reset";
+
+.section6__container {
+  padding: 120px 0;
+  width: 660px;
+  margin: auto;
+    
+  &--title p:nth-of-type(1) {
+    @include homepageTitle();
+  }
+
+  &--title p:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    color: $greyscale-grey-600;
+  }
+
+  //   &--img {
+  //     margin: auto;
+  //     background-image: url("../../public/assets/icons/general/illustration2.png");
+  //     background-size: cover;
+  //     width: 1060px;
+  //     height: 515px;
+  //     margin-top: 88px;
+  //   }
+}
