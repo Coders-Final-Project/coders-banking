@@ -1,8 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import "@/sass/pages/_about.scss";
 import GetStarted from "@/components/GetStarted/GetStarted";
+import FilterButton from "@/components/FilterButton/FilterButton";
+
+import { about } from "@/data/aboutData";
+import AboutCard from "@/components/AboutCard/AboutCard";
+
+const allCategories = ["All", ...new Set(about.map((about) => about.category))];
 
 const About = () => {
+  const [categories, setCategories] = useState(allCategories);
+  const [activeCategory, setActiveCategory] = useState(allCategories[0]);
+  const [aboutItems, setAboutItems] = useState(about);
+
+  const filterAboutCategories = (category: string) => {
+    if (category === "All") {
+      setAboutItems(about);
+      setActiveCategory(category);
+      return;
+    }
+
+    const filteredAboutCategory = about.filter(
+      (item) => item.category === category,
+    );
+
+    setAboutItems(filteredAboutCategory);
+    setActiveCategory(category);
+  };
+
   return (
     <div className="about">
       <div className="about__item1">
@@ -91,6 +118,17 @@ const About = () => {
             <img src="../assets/about/webull.png" alt="" />
           </div>
         </div>
+      </div>
+
+      <div className="about__item4">
+        <p className="title">Meet Our Team</p>
+
+        <FilterButton
+          categories={categories}
+          activeCategory={activeCategory}
+          filterCards={filterAboutCategories}
+        />
+        <AboutCard aboutItems={aboutItems} />
       </div>
       <GetStarted />
     </div>

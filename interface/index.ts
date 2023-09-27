@@ -24,3 +24,13 @@ export interface IIntegrationCard {
   desc: string;
   imgUrl: string;
 }
+
+export interface IAboutCard {
+  id: number;
+  category: string;
+  title: string;
+  pic: string;
+  desc: string;
+  twitterIcon: string;
+  lnkdIcon: string;
+}
