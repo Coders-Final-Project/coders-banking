@@ -98,4 +98,12 @@
       padding-top: 64px;
     }
   }
+
+  &__item4 {
+    .title {
+      text-align: center;
+      margin-bottom: 56px;
+      @extend %website-heading3;
+    }
+  }
 }
