@@ -1,5 +1,6 @@
 import React from "react";
 import "@/sass/pages/_about.scss";
+import GetStarted from "@/components/GetStarted/GetStarted";
 
 const About = () => {
   return (
@@ -68,7 +69,30 @@ const About = () => {
       </div>
 
       <div className="about__item2"></div>
-      <div className="about__item3"></div>
+      <div className="about__item3">
+        <div className="desc">
+          <p>Our Investors</p>
+          <p>
+            We’re proud to be supported by investors who helped build our
+            vision.
+          </p>
+        </div>
+        <div className="brands">
+          <div>
+            <img src="../assets/about/kraken.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/about/wyre.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/about/robinhood.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/about/webull.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <GetStarted />
     </div>
   );
 };
