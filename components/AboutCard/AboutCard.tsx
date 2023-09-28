@@ -13,27 +13,13 @@ const AboutCard = ({ aboutItems }: IAboutItemsProps) => {
       {aboutItems.map((item) => {
         return (
           <div key={item.id} className="aboutCard__container">
-            <div
-              style={{
-                margin: "auto",
-                marginTop: "48px",
-                width: "50%",
-                marginBottom: "24px",
-              }}
-            >
-              <Image
-                src={item.pic}
-                alt={"icon"}
-                width={120}
-                height={120}
-                style={{
-                  paddingLeft: "45px",
-                }}
-              />
+            <div className="aboutCard__container--img">
+              <Image src={item.pic} alt={"icon"} width={120} height={120} />
             </div>
 
             <p className="aboutCard__container--title">{item.title}</p>
             <p className="aboutCard__container--desc">{item.desc}</p>
+
             <div className="aboutCard__container--icons">
               <img
                 src={item.lnkdIcon}
