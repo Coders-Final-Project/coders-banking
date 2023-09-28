@@ -15,3 +15,8 @@
     cursor: pointer;
   }
 }
+
+.rounded__button.rounded__button--light {
+  background-color: $greyscale-grey-100;
+  color: $main-color-black;
+}

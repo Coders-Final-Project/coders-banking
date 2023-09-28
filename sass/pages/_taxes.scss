@@ -1,0 +1,51 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+
+.taxes__intro {
+  @include flexbox(
+    $direction: column,
+    $justify: space-between,
+    $items: center,
+    $gap: 5em
+  );
+  padding: 88px 190px;
+
+  &__context {
+    @include flexbox(
+      $direction: column,
+      $justify: space-between,
+      $items: center
+    );
+
+    &__header {
+      @extend %website-heading2;
+      color: $main-color-black;
+      max-width: 950px;
+      text-align: center;
+      text-transform: capitalize;
+      margin-bottom: 24px;
+    }
+
+    &__desc {
+      @extend %body-medium2;
+      color: $greyscale-grey-600;
+      max-width: 660px;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    &__btngroup {
+      @include flexbox($justify: center, $items: center, $gap: 1.5em);
+    }
+  }
+
+  &__partner {
+    @include flexbox($justify: space-between, $items: center, $gap: 5em);
+
+    &__item {
+      cursor: pointer;
+    }
+  }
+}
