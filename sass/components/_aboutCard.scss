@@ -14,6 +14,12 @@
     border: 1px solid $greyscale-grey-200;
     border-radius: 24px;
 
+    &--img {
+      margin-top: 48px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
     &--title {
       font-size: 28px;
       line-height: 42px;
