@@ -34,3 +34,15 @@ export interface IAboutCard {
   twitterIcon: string;
   lnkdIcon: string;
 }
+
+export interface ITaxSummaryMonthes {
+  id: number;
+  name: string;
+  number: string;
+}
+
+export interface ITaxSummary {
+  id: number;
+  person: string;
+  monthes: { id: number; name: string; number: string }[];
+}
