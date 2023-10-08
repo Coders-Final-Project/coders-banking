@@ -179,8 +179,6 @@ const About = () => {
                 <span>$35,235</span>.00
               </div>
             </div>
-
-            
           </div>
         </div>
       </div>
