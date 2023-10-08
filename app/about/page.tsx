@@ -7,6 +7,7 @@ import FilterButton from "@/components/FilterButton/FilterButton";
 
 import { about } from "@/data/aboutData";
 import AboutCard from "@/components/AboutCard/AboutCard";
+import Image from "next/image";
 
 const allCategories = ["All", ...new Set(about.map((about) => about.category))];
 
@@ -95,7 +96,95 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about__item2"></div>
+      <div className="about__item2">
+        <div className="about__item2--heading">
+          <p className="about__item2--heading-desc">
+            Our <span>Mission</span>
+          </p>
+          <p className="about__item2--heading-info">
+            Open up the vast of the world for every person, business and
+            country. We envision a world where every person and business truly
+            belongs in the global market.
+          </p>
+        </div>
+
+        <div>{/* <Image src={""} alt="" /> */}</div>
+
+        <div className="payrolls">
+          <div className="reminder item">
+            <p className="reminder__title">Payroll Reminder</p>
+            <p>Reminder payroll for 15 employees</p>
+
+            <div className="employees__container">
+              <p className="employees__container--title">Employees</p>
+              <div className="employees__container--imgs">
+                <Image
+                  src="/assets/about/employee1.png"
+                  alt="emp1"
+                  width={48}
+                  height={48}
+                />
+                <Image
+                  src={"/assets/about/employee2.png"}
+                  alt="emp2"
+                  width={48}
+                  height={48}
+                />
+                <Image
+                  src={"/assets/about/employee3.png"}
+                  alt="emp3"
+                  width={48}
+                  height={48}
+                />
+                <div className="countOfemployee">+12</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="total item">
+            <div className="total__title">
+              <div className="total__desc">
+                <p>Total Payroll</p>
+                <p>15 employees</p>
+              </div>
+              <div>
+                <Image
+                  src={"../assets/about/dollar.svg"}
+                  alt="dollar"
+                  width={48}
+                  height={48}
+                />
+              </div>
+            </div>
+
+            <div className="divison__line"></div>
+
+            <div className="salary">
+              <div>Salary</div>
+              <div>
+                <span>$34,235</span>.00
+              </div>
+            </div>
+
+            <div className="bonus">
+              <div>Bonus</div>
+              <div>
+                <span>$1,000</span>.00
+              </div>
+            </div>
+
+            <div className="total__amount">
+              <div>Total Amount</div>
+              <div>
+                <span>$35,235</span>.00
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
       <div className="about__item3">
         <div className="desc">
           <p>Our Investors</p>
@@ -122,12 +211,13 @@ const About = () => {
 
       <div className="about__item4">
         <p className="title">Meet Our Team</p>
-
-        <FilterButton
-          categories={categories}
-          activeCategory={activeCategory}
-          filterCards={filterAboutCategories}
-        />
+        <div className="about__btngroup">
+          <FilterButton
+            categories={categories}
+            activeCategory={activeCategory}
+            filterCards={filterAboutCategories}
+          />
+        </div>
         <AboutCard aboutItems={aboutItems} />
       </div>
       <GetStarted />

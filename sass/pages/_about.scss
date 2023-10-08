@@ -31,8 +31,8 @@
         padding-top: 48px;
         padding-bottom: 32px;
         text-align: center;
-        font-size: 24px;
         line-height: 38.4px;
+        @extend %website-heading5;
       }
 
       &--table {
@@ -73,6 +73,149 @@
     }
   }
 
+  &__item2 {
+    // width: 840px;
+    margin: auto;
+    padding: 120px 300px;
+
+    &--heading {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+
+      &-desc {
+        flex: 30%;
+        @extend %website-heading3;
+
+        span {
+          color: $main-color-blue;
+        }
+      }
+
+      &-info {
+        flex: 70%;
+        color: $greyscale-grey-600;
+        padding: 32px 0;
+        @extend %body-bold;
+      }
+    }
+
+    .payrolls {
+      display: flex;
+      gap: 107px;
+      border-radius: 16px;
+      background-color: $main-color-white;
+
+      .reminder {
+        border: 2px rgba(230, 220, 220, 0.3) solid;
+        padding: 24px;
+        background-color: $main-color-white;
+        border-radius: 16px;
+        height: 100%;
+
+        .reminder__title {
+          margin-bottom: 4px;
+          @extend %website-heading5;
+        }
+
+        .employees__container {
+          border: 1px #e7eaee solid;
+          border-radius: 16px;
+          margin-top: 24px;
+          padding: 16px;
+          padding-right: 0;
+
+          &--title {
+            @extend %body-regular;
+            color: $main-color-black;
+          }
+
+          &--imgs {
+            display: flex;
+
+            .countOfemployee {
+              width: 48px;
+              height: 48px;
+              border: 2px solid;
+              border-radius: 50%;
+              background-color: $main-color-black;
+              color: $main-color-white;
+              text-align: center;
+              line-height: 48px;
+            }
+          }
+        }
+      }
+
+      .total {
+        padding: 24px;
+        border: 2px rgba(230, 220, 220, 0.3) solid;
+        padding: 24px;
+        background-color: $main-color-white;
+        border-radius: 16px;
+
+        &__title {
+          display: flex;
+          justify-content: space-around;
+          column-gap: 130px;
+
+          .total__desc {
+            p:nth-child(1) {
+              @extend %website-heading5;
+            }
+
+            p:nth-child(2) {
+              @extend %body-regular;
+            }
+          }
+        }
+
+        .divison__line {
+          width: 250px;
+          margin: 24px 0;
+          color: #e7eaee;
+          border: 1px #e7eaee solid;
+        }
+
+        .salary,
+        .bonus {
+          display: flex;
+          justify-content: space-between;
+
+          div:nth-of-type(1) {
+            @extend %body-regular;
+          }
+
+          div:nth-of-type(2) {
+            span {
+              @extend %body-bold;
+            }
+          }
+        }
+
+        .total__amount {
+          display: flex;
+          justify-content: space-between;
+          background-color: $shades-of-blue-96;
+          border-radius: 16px;
+          margin-top: 30px;
+          padding: 16px;
+
+          div:nth-of-type(1) {
+            @extend %body-regular;
+          }
+
+          div:nth-of-type(2) {
+            span {
+              @extend %website-heading4;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__item3 {
     .desc {
       padding-top: 120px;
@@ -104,6 +247,11 @@
       text-align: center;
       margin-bottom: 56px;
       @extend %website-heading3;
+    }
+
+    .about__btngroup {
+      width: 1046px;
+      margin: auto;
     }
   }
 }
