@@ -20,10 +20,12 @@ const Navbar = () => {
       <MainLogo />
 
       <div className="nav__links">
-        <Link href="/" className="nav__links__item">
-          How it works
+        <Link href="/about" className="nav__links__item">
+          About
         </Link>
-
+        <Link href="/blog" className="nav__links__item">
+          Blog
+        </Link>
         <div className="nav__links__item" onClick={openCloseMenu}>
           <div className="dropdown__btn">
             <div className="nav__links__item__text">Features</div>
@@ -100,8 +102,11 @@ const Navbar = () => {
         <Link href="/pricing" className="nav__links__item">
           Pricing
         </Link>
-        <Link href="/" className="nav__links__item">
-          Resources
+        <Link href="/integration" className="nav__links__item">
+          Integration
+        </Link>
+        <Link href="/taxes" className="nav__links__item">
+          Taxes
         </Link>
       </div>
 
