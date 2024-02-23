@@ -33,7 +33,9 @@ const Footer = () => {
         <div className="footer__overview__column">
           <div className="footer__overview__column__title">Company</div>
           <ul className="footer__overview__column__body">
-            <li className="footer__overview__column__body__item">About</li>
+            <li className="footer__overview__column__body__item">
+              <Link href="/about">About</Link>
+            </li>
             <li className="footer__overview__column__body__item">Contact Us</li>
             <li className="footer__overview__column__body__item">Contries</li>
             <li className="footer__overview__column__body__item">Careers</li>
@@ -45,10 +47,14 @@ const Footer = () => {
             <li className="footer__overview__column__body__item">
               Compliances
             </li>
-            <li className="footer__overview__column__body__item">Payments</li>
-            <li className="footer__overview__column__body__item">Taxes</li>
             <li className="footer__overview__column__body__item">
-              Enterprises
+              <Link href="/pricing">Payments</Link>
+            </li>
+            <li className="footer__overview__column__body__item">
+              <Link href="/taxes">Taxes</Link>
+            </li>
+            <li className="footer__overview__column__body__item">
+              <Link href="/integration">Enterprises</Link>
             </li>
           </ul>
         </div>
@@ -56,7 +62,9 @@ const Footer = () => {
           <div className="footer__overview__column__title">Resources</div>
           <ul className="footer__overview__column__body">
             <li className="footer__overview__column__body__item">FAQ</li>
-            <li className="footer__overview__column__body__item">Blog</li>
+            <li className="footer__overview__column__body__item">
+              <Link href="/blog">Blog</Link>
+            </li>
             <li className="footer__overview__column__body__item">Open API</li>
             <li className="footer__overview__column__body__item">Guide</li>
           </ul>
