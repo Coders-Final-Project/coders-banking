@@ -12,6 +12,10 @@
   );
   padding: 120px 182px 48px 190px;
   max-width: 1440px;
+  a {
+    text-decoration: none;
+    color: #9096a2;
+  }
 
   &__overview {
     width: 100%;

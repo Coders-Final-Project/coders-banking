@@ -1,0 +1,17 @@
+@import "/sass/utils/colors";
+@import "/sass/utils/variables";
+@import "/sass/utils/mixins";
+@import "/sass/base/typography";
+@import "/sass/base/reset";
+
+.section2__container {
+  padding: 85px 0;
+  &--img {
+    margin: auto;
+    background-image: url("../../public/assets/icons/general/dashboardpic.png");
+    background-size: cover;
+    width: 1060px;
+    height: 515px;
+    margin-top: 88px;
+  }
+}
