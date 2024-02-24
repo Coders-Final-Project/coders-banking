@@ -1,5 +1,6 @@
 import React from "react";
 import "@/sass/components/_section3.scss";
+import Image from "next/image";
 
 const Section3 = () => {
   return (
@@ -8,10 +9,10 @@ const Section3 = () => {
         Trusted by <span>Established</span> Companies
       </div>
       <div className="section3__container--companyNames">
-        <img src="/assets/icons/general/company1.png" alt="c1" />
-        <img src="/assets/icons/general/company2.png" alt="c2" />
-        <img src="/assets/icons/general/company3.png" alt="c3" />
-        <img src="/assets/icons/general/company4.png" alt="c4" />
+        <Image src="/assets/icons/general/company1.png" alt="c1" />
+        <Image src="/assets/icons/general/company2.png" alt="c2" />
+        <Image src="/assets/icons/general/company3.png" alt="c3" />
+        <Image src="/assets/icons/general/company4.png" alt="c4" />
       </div>
     </div>
   );

@@ -21,13 +21,13 @@ const AboutCard = ({ aboutItems }: IAboutItemsProps) => {
             <p className="aboutCard__container--desc">{item.desc}</p>
 
             <div className="aboutCard__container--icons">
-              <img
+              <Image
                 src={item.lnkdIcon}
                 alt="linkedinIcon"
                 width={48}
                 height={48}
               />
-              <img
+              <Image
                 src={item.twitterIcon}
                 alt="twitterIcon"
                 width={48}

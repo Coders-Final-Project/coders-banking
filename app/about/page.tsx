@@ -50,7 +50,7 @@ const About = () => {
           <div className="about__statistics--table">
             <div className="about__statistics--table--1">
               <div>
-                <img
+                <Image
                   src="../assets/icons/general/money.svg"
                   alt=""
                   width={56}
@@ -64,7 +64,7 @@ const About = () => {
             </div>
             <div className="about__statistics--table--2">
               <div>
-                <img
+                <Image
                   src="../assets/icons/general/earth.svg"
                   alt=""
                   width={56}
@@ -79,7 +79,7 @@ const About = () => {
             </div>
             <div className="about__statistics--table--3">
               <div>
-                <img
+                <Image
                   src="../assets/icons/general/person.svg"
                   alt=""
                   width={56}
@@ -107,8 +107,6 @@ const About = () => {
             belongs in the global market.
           </p>
         </div>
-
-        <div>{/* <Image src={""} alt="" /> */}</div>
 
         <div className="payrolls">
           <div className="reminder item">
@@ -193,16 +191,16 @@ const About = () => {
         </div>
         <div className="brands">
           <div>
-            <img src="../assets/about/kraken.png" alt="" />
+            <Image src="../assets/about/kraken.png" alt="" />
           </div>
           <div>
-            <img src="../assets/about/wyre.png" alt="" />
+            <Image src="../assets/about/wyre.png" alt="" />
           </div>
           <div>
-            <img src="../assets/about/robinhood.png" alt="" />
+            <Image src="../assets/about/robinhood.png" alt="" />
           </div>
           <div>
-            <img src="../assets/about/webull.png" alt="" />
+            <Image src="../assets/about/webull.png" alt="" />
           </div>
         </div>
       </div>
