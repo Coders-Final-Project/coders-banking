@@ -9,7 +9,7 @@ const Section4 = () => {
       </p>
       <p className="section4__container--desc">
         Create a custom contract that’s compliant with local laws, send it to
-        sign, and they'll get onboarded almost instantly.
+        sign, and they will get onboarded almost instantly.
       </p>
       <div className="section4__container--img"></div>
     </div>
